@@ -11,14 +11,14 @@ services:
       - vprodbdata:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=vprodbpass
-  
+
   vprocache01:
-    image: "memcached"
+    image: memcached
     ports:
       - "11211:11211"
 
   vpromq01:
-    image: "rabbitmq"
+    image: rabbitmq
     ports:
       - "15672:15672"
     environment:
@@ -46,3 +46,4 @@ services:
 volumes:
   vprodbdata: {}
   vproappdata: {}
+  
